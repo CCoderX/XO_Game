@@ -15,6 +15,7 @@
 		390E1B8322CB0DA50026E791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390E1B8122CB0DA50026E791 /* LaunchScreen.storyboard */; };
 		390E1B8E22CB0DA50026E791 /* XO_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390E1B8D22CB0DA50026E791 /* XO_GameTests.swift */; };
 		390E1B9922CB0DA50026E791 /* XO_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390E1B9822CB0DA50026E791 /* XO_GameUITests.swift */; };
+		390E1BA722CB12580026E791 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390E1BA622CB12580026E791 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		390E1B9422CB0DA50026E791 /* XO_GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XO_GameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		390E1B9822CB0DA50026E791 /* XO_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XO_GameUITests.swift; sourceTree = "<group>"; };
 		390E1B9A22CB0DA50026E791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		390E1BA622CB12580026E791 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				390E1B7522CB0DA40026E791 /* AppDelegate.swift */,
 				390E1B7722CB0DA40026E791 /* ViewController.swift */,
 				390E1B7922CB0DA40026E791 /* Main.storyboard */,
+				390E1BA622CB12580026E791 /* CollectionViewCell.swift */,
 				390E1B7F22CB0DA50026E791 /* Assets.xcassets */,
 				390E1B8122CB0DA50026E791 /* LaunchScreen.storyboard */,
 				390E1B8422CB0DA50026E791 /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				390E1B7E22CB0DA40026E791 /* XO_Game.xcdatamodeld in Sources */,
 				390E1B7822CB0DA40026E791 /* ViewController.swift in Sources */,
+				390E1BA722CB12580026E791 /* CollectionViewCell.swift in Sources */,
 				390E1B7622CB0DA40026E791 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

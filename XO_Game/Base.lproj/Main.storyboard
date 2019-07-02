@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,108 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XO_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rlc-fl-Cym">
+                                <rect key="frame" x="50" y="291" width="314" height="314"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="314" id="mRo-3R-4qz"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="piV-sm-1vz">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" reuseIdentifier="cell" id="SS8-LJ-sc7" customClass="CollectionViewCell" customModule="XO_Game" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gd3-LF-Eaq">
+                                                    <rect key="frame" x="10" y="10" width="30" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="gd3-LF-Eaq" secondAttribute="bottom" constant="10" id="7Gs-HC-4S7"/>
+                                            <constraint firstAttribute="trailing" secondItem="gd3-LF-Eaq" secondAttribute="trailing" constant="10" id="KSS-FD-TVR"/>
+                                            <constraint firstItem="gd3-LF-Eaq" firstAttribute="leading" secondItem="SS8-LJ-sc7" secondAttribute="leading" constant="10" id="O8O-by-fcw"/>
+                                            <constraint firstItem="gd3-LF-Eaq" firstAttribute="top" secondItem="SS8-LJ-sc7" secondAttribute="top" constant="10" id="owY-Si-Xhk"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="signLabel" destination="gd3-LF-Eaq" id="1Vd-pW-4Na"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="lAE-oN-buP"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oEG-VB-Wsh"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mi-w6-7VW">
+                                <rect key="frame" x="157" y="769" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2cg-Mz-Cm4"/>
+                                    <constraint firstAttribute="width" constant="100" id="HWJ-kG-a1J"/>
+                                </constraints>
+                                <state key="normal" title="Reset Game"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nK2-nz-Q7R"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmb-SQ-8lr">
+                                <rect key="frame" x="132" y="219" width="150" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SwiftyCamp TicTacToe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wze-pB-jZc">
+                                <rect key="frame" x="117" y="76" width="180" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CJW-1d-n4h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wze-pB-jZc" secondAttribute="trailing" constant="117" id="KDZ-Uy-jsz"/>
+                            <constraint firstItem="wze-pB-jZc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="Ktt-iC-ywZ"/>
+                            <constraint firstItem="Rlc-fl-Cym" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tym-bP-d7y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rlc-fl-Cym" secondAttribute="trailing" constant="50" id="Yi9-ue-7Hk"/>
+                            <constraint firstItem="Rlc-fl-Cym" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ard-h9-Owl"/>
+                            <constraint firstItem="wze-pB-jZc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="eyF-vm-EMW"/>
+                            <constraint firstItem="Rlc-fl-Cym" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fcR-JP-8Er"/>
+                            <constraint firstItem="1Mi-w6-7VW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jRA-hS-Ahh"/>
+                            <constraint firstItem="Rlc-fl-Cym" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jiQ-Y5-AQK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Mi-w6-7VW" secondAttribute="bottom" constant="43" id="msq-1X-hqX"/>
+                            <constraint firstItem="Rlc-fl-Cym" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ntY-tn-4MI"/>
+                            <constraint firstItem="wze-pB-jZc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vaR-Bm-oDQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="gameLabel" destination="Wmb-SQ-8lr" id="cx3-Xq-oIy"/>
+                        <outlet property="gameTable" destination="Rlc-fl-Cym" id="vUc-Ek-qcM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="69.565217391304358" y="53.571428571428569"/>
         </scene>
     </scenes>
 </document>
